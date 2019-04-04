@@ -5,3 +5,5 @@ export function superman() {
 export function spiderman() {
     return 'super-heros.js spiderman'
 }
+
+export default {superman, spiderman}
