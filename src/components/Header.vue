@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { superman, spiderman } from './super-heros';
+import { superman, spiderman } from '../super-heros';
 
 export default {
   name: 'Header',

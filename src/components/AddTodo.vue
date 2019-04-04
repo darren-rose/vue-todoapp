@@ -1,9 +1,14 @@
 <template>
   <div>
     <form @submit.prevent="addTodo">
-      <input type="text" name="title" v-model="title" placeholder="Add todo" />
-      <input v-bind:disabled="!title" type="submit" value="add">
-      <v-btn flat target="_blank"><span class="mr-2">Add</span></v-btn>
+      <v-layout row wrap>
+        <v-flex xs12 sm6 md3>
+          <v-text-field v-model="title" label="Add Todo"></v-text-field>
+        </v-flex>
+        <v-flex xs12 sm6 md3>
+          <v-btn v-bind:title="addTitle" v-bind:disabled="!title" type="submit" flat><span class="mr-2">Add</span></v-btn>
+        </v-flex>
+      </v-layout>
     </form>
   </div>
 </template>
@@ -14,8 +19,11 @@ export default {
   props: ["nextId"],
   data() {
     return {
-      title : ''
+      title : '',
+      addTitle: 'click to add todo'
     }
+  },
+  computed: {
   },
   methods : {
     addTodo() {

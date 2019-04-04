@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-on:click="removeTodo">remove</button>
+    <v-btn v-on:click="removeTodo" flat><span class="mr-2">Remove</span></v-btn>
     <input v-bind:checked="todo.completed" type="checkbox" v-on:change="toggleCompleted" />
     {{todo.id}}
     <span v-bind:class="{done : todo.completed}">{{todo.title}}</span>
