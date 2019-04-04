@@ -1,9 +1,18 @@
 <template>
   <div>
-    <v-btn v-on:click="removeTodo" flat><span class="mr-2">Remove</span></v-btn>
-    <input v-bind:checked="todo.completed" type="checkbox" v-on:change="toggleCompleted" />
-    {{todo.id}}
-    <span v-bind:class="{done : todo.completed}">{{todo.title}}</span>
+    <v-layout row wrap>
+      <v-flex xs1 sm1 md1>
+        <v-checkbox :label="`Done`" :input-value="todo.completed" type="checkbox" v-on:change="toggleCompleted" />
+      </v-flex>
+      <v-flex xs12 sm3 md1>
+        <v-btn v-on:click="removeTodo" flat><span class="mr-2">Remove</span></v-btn>
+      </v-flex>
+      <v-flex xs12 sm3 md1>
+        {{todo.id}}
+        <span v-bind:class="{done : todo.completed}">{{todo.title}}</span>
+      </v-flex>
+    </v-layout>
+
   </div>
 </template>
 

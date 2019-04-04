@@ -1,7 +1,7 @@
 export function superman() {
-    return 'hero.js superman'
+    return 'super-heros.js superman'
 }
 
 export function spiderman() {
-    return 'hero.js spiderman'
+    return 'super-heros.js spiderman'
 }
